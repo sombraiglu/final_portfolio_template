@@ -134,6 +134,9 @@ h2 {
 .image-container:hover {
   transform: translateY(-10px); /* Efecto de elevación */
 }
+h2 {
+  color: #ffffff !important;
+}
 
 /* Section Styles */
 section {
@@ -317,8 +320,12 @@ html {
 body {
   font-family: Arial, sans-serif;
   background-color: #1d2c9f;
-  color: #ffffff;
+
   transition: background-color 0.3s, color 0.3s;
+}
+header {
+  background-color: #1d2c9f;
+  transition: background-color 0.3s ease;
 }
 
 /* Modo Oscuro */
@@ -345,16 +352,8 @@ header {
   transition: background-color 0.3s;
 }
 
-body.dark-mode .hero {
-  background-color: #ffffff;
-}
-
 body.dark-mode h1 {
   color: #080e39;
-}
-header {
-  background-color: #1d2c9f;
-  transition: background-color 0.3s ease;
 }
 
 body.dark-mode header {
@@ -363,12 +362,16 @@ body.dark-mode header {
 body.dark-mode .hero {
   filter: grayscale(100%);
 }
+body.dark-mode h2 {
+  color: #ffffff;
+  background-color: #080e39;
+}
 
 body.dark-mode h2 {
   text-align: center;
   font-size: 70px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #080e39;
   padding: 20px;
   border-radius: 8px;
 }
@@ -443,6 +446,122 @@ body.dark-mode .flip-card-front {
 
 .error-icon img:hover {
   transform: scale(1.2);
+}
+
+/* --------------------------------------------------------------------------
+   7. Contact Section
+   -------------------------------------------------------------------------- */
+.social-links a {
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--bs-primary) !important;
+  transform: translateY(-3px);
+}
+
+/* Overlay info en imágenes del grid */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 44, 159, 0.75); /* azul translúcido */
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Texto animado */
+.image-overlay h3,
+.image-overlay p {
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* Hover: aparece overlay */
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-container:hover .image-overlay h3,
+.image-container:hover .image-overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Imagen se oscurece */
+.image-container:hover img {
+  opacity: 0.35;
+}
+body.dark-mode .image-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* CONTACTO */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.contact-box {
+  background-color: #ffffff;
+  color: #1d2c9f;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-box h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f2f4ff;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: 2px solid #1d2c9f;
+}
+
+.contact-box button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #1d2c9f;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-box button:hover {
+  background-color: #080e39;
+  transform: translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
