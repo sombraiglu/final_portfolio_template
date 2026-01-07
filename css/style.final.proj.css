@@ -385,8 +385,8 @@ body.dark-mode .flip-card-front {
 
 .flip-card {
   background-color: transparent;
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   perspective: 1000px;
 }
 
@@ -443,4 +443,70 @@ body.dark-mode .flip-card-front {
 
 .error-icon img:hover {
   transform: scale(1.2);
+}
+
+/* --------------------------------------------------------------------------
+   9. Z-Index Utility Classes
+   --------------------------------------------------------------------------
+  */
+.z-1 {
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   10. Accessibility: Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .shape {
+    display: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-card:hover .card-img-wrapper img {
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .shape {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-cta .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-cta .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-image::before {
+    display: none;
+  }
 }
