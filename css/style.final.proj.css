@@ -316,29 +316,21 @@ html {
   }
 }
 
-/* Estilo General */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1d2c9f;
-
-  transition: background-color 0.3s, color 0.3s;
-}
 header {
   background-color: #1d2c9f;
   transition: background-color 0.3s ease;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 /* Modo Oscuro */
 body.dark-mode {
   background-color: #121212;
   color: #fff;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
 }
 
 /* Botón de Modo Oscuro */
