@@ -329,7 +329,7 @@ header {
 
 /* Modo Oscuro */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #080e39;
   color: #fff;
 }
 
@@ -349,21 +349,14 @@ body.dark-mode h1 {
 }
 
 body.dark-mode header {
-  background-color: #080e39;
-}
-body.dark-mode .hero {
-  filter: grayscale(100%);
-}
-body.dark-mode h2 {
-  color: #ffffff;
-  background-color: #080e39;
+  background-color: #101c76;
 }
 
 body.dark-mode h2 {
   text-align: center;
   font-size: 70px;
   color: #000000;
-  background-color: #080e39;
+  background-color: #101c76;
   padding: 20px;
   border-radius: 8px;
 }
