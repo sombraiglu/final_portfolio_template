@@ -92,7 +92,65 @@ h2 {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   color: #1d2c9f;
 }
+/* --------------------------------------------------------------------------
+   Scroll Indicator (Hero)
+   -------------------------------------------------------------------------- */
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* Mouse shape */
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  position: relative;
+}
+
+/* Wheel animation */
+.wheel {
+  width: 4px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 1.5s infinite;
+}
+
+@keyframes scroll-wheel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 14px);
+  }
+}
+
+.scroll-indicator {
+  bottom: 80px; /* antes 30px */
+}
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -333,6 +391,11 @@ body.dark-mode {
   color: #fff;
 }
 
+body.dark-mode p,
+body.dark-mode .section-paragraph {
+  color: #d6dbff;
+}
+
 /* Botón de Modo Oscuro */
 .dark-mode-toggle {
   padding: 10px 15px;
@@ -353,15 +416,18 @@ body.dark-mode header {
 }
 
 body.dark-mode h2 {
-  text-align: center;
-  font-size: 70px;
   color: #000000;
   background-color: #101c76;
-  padding: 20px;
-  border-radius: 8px;
 }
 body.dark-mode .flip-card-front {
   background-color: #080e39;
+}
+
+body.dark-mode .scroll-indicator,
+body.dark-mode .mouse,
+body.dark-mode .wheel {
+  color: #ffffff;
+  border-color: #080e39;
 }
 
 .interactive-section {
@@ -489,7 +555,7 @@ body.dark-mode .flip-card-front {
   opacity: 0.35;
 }
 body.dark-mode .image-overlay {
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(29, 44, 159, 0.75);
 }
 
 /* CONTACTO */
@@ -547,6 +613,22 @@ body.dark-mode .image-overlay {
 .contact-box button:hover {
   background-color: #080e39;
   transform: translateY(-2px);
+}
+
+body.dark-mode .contact-box {
+  background-color: #1d2c9f;
+  color: #ffffff;
+}
+
+body.dark-mode .contact-box input,
+body.dark-mode .contact-box textarea {
+  background-color: #080e39;
+  color: #ffffff;
+}
+
+body.dark-mode .contact-box button {
+  background-color: #ffffff;
+  color: #080e39;
 }
 
 /* --------------------------------------------------------------------------
