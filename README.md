@@ -1,6 +1,6 @@
 # My Static Site
 
-Welcome to my static site! This project showcases Web Fundamentals.
+Welcome to my portfolio template for my final project in advanced web design.
 
 ## Demo
 
