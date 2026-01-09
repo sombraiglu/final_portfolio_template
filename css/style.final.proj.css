@@ -45,7 +45,7 @@ header {
 }
 h2 {
   text-align: center;
-  font-size: 70px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
   color: #ffffff;
   background-color: #1d2c9f;
   padding: 20px;
@@ -73,7 +73,7 @@ h2 {
 
 .hero h1 {
   color: #ffffff;
-  font-size: 400px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   margin: 0;
   text-align: center;
   overflow: hidden;
@@ -435,6 +435,20 @@ body.dark-mode .wheel {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.flip-container {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
 }
 
 .flip-card {
